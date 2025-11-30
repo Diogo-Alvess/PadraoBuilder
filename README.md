@@ -1,0 +1,7 @@
+Este repositório apresenta a implementação do padrão de projeto Builder aplicada ao processo de criação de pedidos. O objetivo do padrão é facilitar a construção de objetos complexos passo a passo, garantindo clareza, flexibilidade e evitando construtores extensos ou com grande quantidade de parâmetros.
+
+A classe Pedido representa a entidade principal do sistema, contendo atributos como cliente, valor total, endereço, data do pedido, forma de pagamento e outros detalhes relevantes. Para promover uma criação organizada e segura desses objetos, foi implementada a classe PedidoBuilder, responsável por configurar o objeto final através de métodos encadeados e validações internas.
+
+O Builder permite que um pedido seja montado de forma gradual, tornando o código mais legível e reduzindo falhas na inicialização. Antes da construção final, o método build() realiza verificações obrigatórias, assegurando que dados essenciais, como ID do pedido, cliente e valor total, sejam informados corretamente. Caso os requisitos não sejam atendidos, exceções são lançadas, prevenindo a criação de objetos inconsistentes.
+
+A aplicação do padrão demonstra como o Builder contribui para sistemas que envolvem objetos com muitos atributos e variações de preenchimento, permitindo instanciar pedidos completos, parciais ou personalizados, sem sobrecarregar o construtor da classe principal. Com isso, o processo de criação torna-se mais simples, seguro e expansível, mantendo baixo acoplamento e facilitando futuras evoluções.
